@@ -33,4 +33,3 @@ def Positions(theta, beta, d):
 
 def HomogeneousDistance(i, j, positions):
     return np.linalg.norm(positions[j]-positions[i])
-
