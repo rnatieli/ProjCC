@@ -24,8 +24,7 @@ def ReadCmats(file):
     theta, omega, dist = stdConversion(atoms)
     cmats = [] #o erro fica aqui, se você tem n atomos, 
     #voce gera n-1 zmats, o que é um problema, ja que ele calcula em pares
-    for i in range(len(theta)):
-        cmats.append(C_matrix(theta[i],omega[i],dist[i]))
+    cmats = [C_matrix(theta[i], omega[i], dist[i]) for i in range(len(dist))]
     return cmats
 
 
