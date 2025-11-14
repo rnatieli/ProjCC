@@ -12,7 +12,7 @@ def calcCDists(cmats):
     CrunTimeList = []
     t0 = time.time()
     numOps = 0
-    for comb in combinations(range(len(cmats)), 2):
+    for comb in combinations(range(len(cmats)+1), 2):
         print(comb)
         print(ConformalDistance(comb[0],comb[1],cmats))
         numOps += 1
@@ -87,3 +87,6 @@ def allZDists(): #rotina para calcular distancias em Zmats
 allCDists()
 allZDists() #ao que tudo indica isso é o método mais rápido, mas como estamos convertendo as zmat em cartesianas (essencialmente) pode ser por conta disso
 #calcular a inversa de uma matriz é beeem caro como voce sabe, e como fazemos isso em confOps ConformalDistances pode ser a causa do peso
+print("=======================END=OF=CODE=======================")
+print("Time to run all operations in Z-matrices is {zTime} seconds")
+print("Time to run all operations in C-matrices is {cTime} seconds")
