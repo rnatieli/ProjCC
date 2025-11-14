@@ -26,7 +26,8 @@ def ConformalDistance(i, j, cmats):
     e0 = np.array([[0],[0],[0],[1],[0]])
     e_inf = np.array([[0],[0],[0],[0],[1]])
 
-    if i >= len(cmats):
+    natoms = len(cmats) + 1
+    if i >= natoms or j >= natoms:
         print("length err")
         return 0
 
